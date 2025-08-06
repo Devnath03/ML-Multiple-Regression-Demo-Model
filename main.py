@@ -18,5 +18,4 @@ state_value = 1 if state == "California" else 0
 if st.button("Predict"):
     inp = np.array([[float(RD), float(Administration), float(Marketing), float(state_value)]])
     prediction = model.predict(inp)
-    st.success("profit:")
- 
+    st.success(f"profit: Rs. {prediction[0]:,.2f} ")
